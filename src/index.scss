@@ -1,3 +1,5 @@
+$base-color: #7510F7;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
 }

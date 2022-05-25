@@ -1,23 +1,47 @@
+import React, {useState, useContext} from 'react';
+import {appContext} from './context/context.js';
 import logo from './logo.svg';
-import './App.css';
+import './app.scss';
 
-function App() {
+//import components//
+import Header from './components/header/header.js';
+import Modal from './components/modal/modal.js';
+import Post from './components/posts/posts.js';
+//*****************//
+
+
+const App = () => {
+
+  const {data: {modal, posts}, actions} = useContext(appContext)
+
+  console.log(posts)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+
+      <div className='header-container'>
+        <Header />
+      </div>
+
+      {
+        modal
+        ? (
+          <div className='modal-container'>
+            <Modal modalType={modal}/>
+          </div>
+        )
+        : null
+      }
+
+      <div className='post-container'>
+        {
+          !posts.length
+          ? null
+          : posts.map((item, index) => <Post key={index} data={item}/>)
+        }
+      </div>
+
+
     </div>
   );
 }
