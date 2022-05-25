@@ -9,7 +9,7 @@ import CustomButton from '../buttons/custom-button.js';
 
 const Modal = ({modalType}) => {
 
-  const {actions: {handleAddPost, setModal}, data} = useContext(appContext);
+  const {actions: {handleAddPost, handleAddReply, setModal, setEditIndex}, data: {modal, editIndex} } = useContext(appContext);
 
   const [modalInput, setModalInput] = useState({
     input: '',
@@ -29,7 +29,7 @@ const Modal = ({modalType}) => {
 
   const handleSubmit = (e) => {
     if (!input || !username) return;
-    handleAddPost(modalInput);
+    modal === 'new' ? handleAddPost(modalInput) : handleAddReply(modalInput, editIndex)
     setModal(false);
   }
 

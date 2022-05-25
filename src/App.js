@@ -14,8 +14,6 @@ const App = () => {
 
   const {data: {modal, posts}, actions} = useContext(appContext)
 
-  console.log(posts)
-
   return (
     <div className='app-container'>
 
@@ -37,7 +35,7 @@ const App = () => {
         {
           !posts.length
           ? null
-          : posts.map((item, index) => <Post key={index} data={item}/>)
+          : posts.map((item, index) => <Post key={index} index={index} data={item}/>)
         }
       </div>
 
