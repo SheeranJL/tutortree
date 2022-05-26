@@ -37,6 +37,14 @@ $modal-font: normal normal 600 25px/34px Open Sans;
   box-shadow: 0px 10px 20px $color;
 }
 
+@mixin comment-styles {
+  font-family: open-sans;
+  font-weight: regular;
+  font-size: 20px;
+  color: #141C3A;
+  letter-spacing: 0px;
+  line-height: 34;
+}
 
 
 

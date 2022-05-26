@@ -5,16 +5,17 @@
   @include width-height(1280px, 1438px);
   position: relative;
 
-
   .modal-container {
     display: flex;
     justify-content: center;
     position: absolute;
     @include width-height(100%, 100%);
-    @include background-style(#141C3A);
     border: $default-border;
     top: 0px;
-    opacity: 0.88;
+    z-index: 100;
+    background-color: rgba(20,28,28,0.88);
+
+
     /*left: -16px;*/
   }
 
@@ -24,7 +25,6 @@
     border: $default-border;
     margin-top: 88px;
     left: 0px;
-
     opacity: 1;
   }
 

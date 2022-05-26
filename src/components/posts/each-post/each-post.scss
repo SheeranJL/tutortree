@@ -3,9 +3,13 @@
 .each-post {
   /* Layout Properties */
   display: flex;
+
+
   @include spacing(280px, 157px, 969px, 218px);
   margin-right: 154px;
   opacity: 1;
+
+
 }
 
 .each-reply {
@@ -14,6 +18,7 @@
   display: flex;
   margin-right: 154px;
   margin-top: 48px;
+
 }
 
 .message-container {
@@ -25,32 +30,30 @@
   opacity: 1;
 }
 
-.message-button {
-  margin-left: auto;
-  margin-right: 29px;
-  @include spacing(422px, 941px, 156px, 49px);
-}
 
 .message-input {
+  @include comment-styles;
   text-align: left;
   margin-left: 40px;
   font: normal normal normal 20px/34px Open Sans;
-  letter-spacing: 0px;
-  color: #141C3A;
   opacity: 1;
 }
 
 .message-username {
   @include width-height(334px, 55px);
   font: normal normal 600 25px/34px Open Sans;
-  color: #141C3A;
-  opacity: 1;
-  letter-spacing: 0px;
+  margin: 35px 0px 8px 40px;
   text-align: left;
-  margin-top: 35px;
-  margin-bottom: 8px;
   font-size: 25px;
-  margin-left: 40px;
+  opacity: 1;
+}
+
+
+.message-button {
+  margin-left: auto;
+  margin-right: 29px;
+  @include spacing(422px, 941px, 156px, 49px);
+
 }
 
 
