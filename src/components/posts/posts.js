@@ -15,13 +15,11 @@ const Posts = ({data, index}) => {
   //Import context state//
   const {actions: {setModal, setEditIndex}} = useContext(appContext);
 
-
   //This logic is for tethering a reply to a specific post ID using the posts' index as a reference point//
   const handleEdit = () => {
     setModal('reply');
     setEditIndex(index);
   }
-
 
   return (
     <div className='post'>

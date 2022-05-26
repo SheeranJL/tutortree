@@ -12,6 +12,7 @@ export const Provider = (props) => {
 
   //Local to handle adding a new post//
   const handleAddPost = (post) => {
+    console.log(post)
     posts.length ? setPost([...posts, post]) : setPost([post])
   }
 

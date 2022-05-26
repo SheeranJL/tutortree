@@ -10,7 +10,6 @@ import CustomButton from '../../buttons/custom-button.js';
 
 const EachPost = ({data, handleEdit, postId, messageType}) => {
 
-
   return (
     <div className={messageType === 'main' ? 'each-post' : 'each-reply'}>
 
