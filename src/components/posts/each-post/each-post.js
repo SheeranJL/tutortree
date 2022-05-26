@@ -26,7 +26,7 @@ const EachPost = ({data, handleEdit, postId, messageType}) => {
             textColour={'purple'}
             clickEvent={handleEdit}>
             Reply
-            </CustomButton>
+          </CustomButton>
         </div>
 
       </div>
