@@ -4,8 +4,11 @@ import './upvote.scss';
 
 const Upvote = ({votes, postId}) => {
 
+  //import context state//
   const {actions: {handleVotes}} = useContext(appContext)
 
+
+  //Logic to handle upvoting/downvoting//
   const handleVoteAction = (sentiment) => {
     sentiment === 'increase' ? handleVotes('up', postId) : handleVotes('down', postId)
   }

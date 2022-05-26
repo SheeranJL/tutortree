@@ -9,7 +9,9 @@ import CustomButton from '../buttons/custom-button.js';
 
 const Header = () => {
 
+  //import context state//
   const {actions: {setModal}} = useContext(appContext);
+
 
   return (
     <div className='header-component'>

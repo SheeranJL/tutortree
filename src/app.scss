@@ -1,4 +1,4 @@
-$base-color: #7510F7;
+@import './sass/variables.scss';
 
 .app-container {
   display: flex;
@@ -7,14 +7,16 @@ $base-color: #7510F7;
   position: relative;
   top: 0px;
   left: 0px;
-  width: 1280px;
-  height: 1438px;
+  min-width: 1280px;
+  max-width: 1280px;
+  min-height: 1438px;
+  max-height: 1438px;
+
 
   .modal-container {
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: absolute;
     /* Layout Properties */
     top: 0px;
@@ -25,14 +27,13 @@ $base-color: #7510F7;
   }
 
   .post-container {
-    background-color: $base-color;
     /* Layout Properties */
     margin-top: 88px;
     left: 0px;
     width: 1280px;
     height: 1350px;
     /* UI Properties */
-    background: #7510F7 0% 0% no-repeat padding-box;
+    background: $base-color 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     opacity: 1;
   }

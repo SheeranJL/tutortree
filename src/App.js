@@ -6,12 +6,13 @@ import './app.scss';
 //import components//
 import Header from './components/header/header.js';
 import Modal from './components/modal/modal.js';
-import Post from './components/posts/posts.js';
+import Posts from './components/posts/posts.js';
 //*****************//
 
 
 const App = () => {
 
+  //Import context app state//
   const {data: {modal, posts}, actions} = useContext(appContext)
 
   return (
@@ -35,10 +36,9 @@ const App = () => {
         {
           !posts.length
           ? null
-          : posts.map((item, index) => <Post key={index} index={index} data={item}/>)
+          : posts.map((item, index) => <Posts key={index} index={index} data={item}/>)
         }
       </div>
-
 
     </div>
   );

@@ -4,14 +4,19 @@ export const appContext = createContext();
 
 export const Provider = (props) => {
 
+  //Context application state//
   const [posts, setPost] = useState([]);
   const [modal, setModal] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
+
+  //Local to handle adding a new post//
   const handleAddPost = (post) => {
     posts.length ? setPost([...posts, post]) : setPost([post])
   }
 
+
+  //Logic to handle appending a reply to an existing post//
   const handleAddReply = (reply, index) => {
     setPost(prevState => {
       const newState = [...prevState];
@@ -21,18 +26,12 @@ export const Provider = (props) => {
     setEditIndex(null);
   }
 
+
+  //Logic to handle upvoting a post//
   const handleVotes = (vote, index) => {
-
-    console.log(vote);
-
     setPost(prevState => {
       const newState = [...prevState];
-
-      if (vote === 'up') {
-        newState[index].votes += 1
-      } else {
-        newState[index].votes -= 1
-      }
+      vote === 'up' ? newState[index].votes += 1 : newState[index].votes -= 1
       return newState;
     })
   }
@@ -42,18 +41,8 @@ export const Provider = (props) => {
   return (
     <appContext.Provider
       value={{
-        data: {
-          posts,
-          modal,
-          editIndex,
-        },
-        actions: {
-          setModal,
-          handleAddPost,
-          handleAddReply,
-          setEditIndex,
-          handleVotes,
-        }
+        data: { posts, modal, editIndex },
+        actions: { setModal, handleAddPost, handleAddReply, setEditIndex, handleVotes }
       }}
     >
       {props.children}

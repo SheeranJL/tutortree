@@ -5,42 +5,35 @@ import './posts.scss';
 //import components//
 import CustomButton from '../buttons/custom-button.js';
 import Upvote from './upvote/upvote.js';
+import EachPost from './each-post/each-post.js';
 //*****************//
 
 
-const Post = ({data, index}) => {
 
+const Posts = ({data, index}) => {
+
+  //Import context state//
   const {actions: {setModal, setEditIndex}} = useContext(appContext);
 
+
+  //This logic is for tethering a reply to a specific post ID using the posts' index as a reference point//
   const handleEdit = () => {
     setModal('reply');
     setEditIndex(index);
   }
 
-  console.log(data);
 
   return (
     <div className='post'>
-
-      <div className='upvote-container'>
-        <Upvote votes={data.votes} postId={index} />
-      </div>
-
-      <div className='message-container'>
-        <p>{data.username}</p>
-        <p>{data.input}</p>
-        <CustomButton
-          textColour={'purple'}
-          clickEvent={handleEdit}>
-          Reply
-        </CustomButton>
-      </div>
-
-
-
+      <EachPost messageType={'main'} data={data} handleEdit={handleEdit} postId={index}/>
+      {
+        data.replies.length
+        ? data.replies.map((item, i) => <EachPost messageType={'reply'} data={item} handleEdit={handleEdit} postId={i} />)
+        : null
+      }
     </div>
 
   )
 }
 
-export default Post;
+export default Posts;

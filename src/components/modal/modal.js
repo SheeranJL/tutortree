@@ -9,24 +9,23 @@ import CustomButton from '../buttons/custom-button.js';
 
 const Modal = ({modalType}) => {
 
+  //import context state//
   const {actions: {handleAddPost, handleAddReply, setModal, setEditIndex}, data: {modal, editIndex} } = useContext(appContext);
 
-  const [modalInput, setModalInput] = useState({
-    input: '',
-    username: '',
-    replies: [],
-    votes: 0,
-  });
-  const {input, username} = modalInput
 
+  //local component state//
+  const [modalInput, setModalInput] = useState({ input: '', username: '', replies: [], votes: 0 });
+  const {input, username} = modalInput;
+
+
+  //Logic to handle element value changes and store these values in local app state (modalInput)//
   const handleChange = (e) => {
     const {name, value} = e.target
-    setModalInput(prevState => ({
-      ...prevState,
-      [name]: value
-    }))
+    setModalInput(prevState => ({...prevState, [name]: value }))
   }
 
+
+  //Logic to handle submission//
   const handleSubmit = (e) => {
     if (!input || !username) return;
     modal === 'new' ? handleAddPost(modalInput) : handleAddReply(modalInput, editIndex)
