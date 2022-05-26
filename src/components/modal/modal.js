@@ -36,28 +36,33 @@ const Modal = ({modalType}) => {
   return (
     <div className='modal'>
 
-      <input
-        className='top-modal-input'
-        name='input'
-        type="text" placeholder={modalType === 'new' ? 'Write your post....' : 'Write your reply....'}
-        value={input}
-        onChange={handleChange}
-      />
+      <div className='top-modal-input'>
+        <input
+          className='input-text'
+          name='input'
+          type="text" placeholder={modalType === 'new' ? 'Write your post....' : 'Write your reply....'}
+          value={input}
+          onChange={handleChange}
+        />
+      </div>
 
+      <div className='bottom-modal-name'>
       <input
-        className='bottom-modal-name'
+        className='input-name'
         name='username'
         type="text" placeholder='Enter your pseudonym'
         value={username}
         onChange={handleChange}
       />
+      </div>
 
-      <CustomButton
-        fill={true}
-        clickEvent={handleSubmit}>
-          {modalType === 'new' ? 'Post' : 'Reply'}
-      </CustomButton>
-
+      <div className='modal-button'>
+        <CustomButton
+          fill={true}
+          clickEvent={handleSubmit}>
+            {modalType === 'new' ? 'Post' : 'Reply'}
+        </CustomButton>
+      </div>
 
     </div>
   )

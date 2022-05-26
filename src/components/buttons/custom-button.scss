@@ -2,8 +2,8 @@ button {
   /* Layout Properties */
   top: 57px;
   left: 754px;
-  width: 345px;
-  height: 86px;
+  width: 100%;
+  height: 100%;
   /* UI Properties */
   border: 3px solid #7510F7;
   border-radius: 50px;
@@ -11,4 +11,5 @@ button {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  font: normal normal bold 30px/41px Open Sans;
 }

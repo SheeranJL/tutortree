@@ -1,39 +1,30 @@
 @import './scss/variables.scss';
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column-center;
+  @include width-height(1280px, 1438px);
   position: relative;
-  width: 1280px;
-  height: 1438px;
+
 
   .modal-container {
     display: flex;
     justify-content: center;
     position: absolute;
-    
-    /* Layout Properties */
+    @include width-height(100%, 100%);
+    @include background-style(#141C3A);
+    border: $default-border;
     top: 0px;
-    /* UI Properties */
-    background: #141C3A 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
     opacity: 0.88;
-    top: 0px;
-    left: -16px;
-    width: 1336px;
-    height: 1438px;
+    /*left: -16px;*/
   }
 
   .post-container {
-    /* Layout Properties */
+    @include width-height(100%, 100%);
+    background: $base-color 0% 0% no-repeat padding-box;
+    border: $default-border;
     margin-top: 88px;
     left: 0px;
-    width: 1280px;
-    height: 1350px;
-    /* UI Properties */
-    background: $base-color 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
+
     opacity: 1;
   }
 

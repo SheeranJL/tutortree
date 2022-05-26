@@ -1,30 +1,25 @@
+@import '../../scss/variables.scss';
+
 .header-component {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* Layout Properties */
-  top: 10px;
-  left: 88px;
-  width: 1104px;
-  height: 180px;
-  /* UI Properties */
+  position: absolute;
+  @include spacing(10px, 88px, 1104px, 180px);
   background: #141C3A 0% 0% no-repeat padding-box;
   box-shadow: 0px 8px 8px #00000034;
   border-radius: 20px;
   opacity: 1;
-  position: absolute;
-
+  
   p {
-    /* Layout Properties */
-    top: 74px;
-    left: 167px;
-    width: 303px;
-    height: 53px;
-    /* UI Properties */
-    text-align: left;
+    @include spacing(74px, 167px, 303px, 53px);
     font: normal normal bold 35px/47px Open Sans;
+    color: $base-text;
     letter-spacing: 0px;
-    color: #FFFFFF;
     opacity: 1;
+  }
+
+  .header-button {
+    @include spacing(57px, 745px, 345px, 86px)
   }
 }

@@ -16,11 +16,15 @@ const Header = () => {
   return (
     <div className='header-component'>
       <p>Maths For 'em</p>
-      <CustomButton
-        clickEvent={() => setModal('new')}
-        type={'newPost'}>
-        New Post
-      </CustomButton>
+
+      <div className='header-button'>
+        <CustomButton
+          clickEvent={() => setModal('new')}
+          type={'newPost'}>
+          New Post
+        </CustomButton>
+      </div>
+
     </div>
   )
 }

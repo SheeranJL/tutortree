@@ -1,1 +1,45 @@
+//Base styles//
 $base-color: #7510F7;
+$base-text: #FFFFFF;
+$default-border: 1px solid #707070;
+$modal-font: normal normal 600 25px/34px Open Sans;
+//Mixins//
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin spacing($top, $left, $width, $height) {
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin background-style($color) {
+  background: $color 0% 0% no-repeat padding-box;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0px 10px 20px $color;
+}
+
+
+
+
+//modal styles//
+$border-modal: 3px solid #7510F7;
+$box-shadow: 0px 10px 20px #00000029;
