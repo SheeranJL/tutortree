@@ -14,7 +14,7 @@ const EachPost = ({data, handleEdit, postId, messageType, index, parentPost}) =>
     <div className={messageType === 'main' ? 'each-post' : 'each-reply'}>
 
       <div className='upvote-container'>
-        <Upvote votes={data.votes} postId={postId} />
+        <Upvote votes={data.votes} postId={postId} parentPost={parentPost} />
       </div>
 
       <div className='message-container'>

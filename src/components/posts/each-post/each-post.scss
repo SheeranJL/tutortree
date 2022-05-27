@@ -8,7 +8,7 @@
   height: auto;
   margin-right: 154px;
   opacity: 1;
-
+  margin-bottom: 48px;
 }
 
 .each-reply {
@@ -17,8 +17,7 @@
   height: auto;
   display: flex;
   margin-right: 154px;
-  margin-top: 48px;
-
+  margin-bottom: 53px;
 }
 
 .message-container {
@@ -31,16 +30,6 @@
 }
 
 
-.message-input {
-  @include comment-styles;
-
-  width: 90%;
-  text-align: left;
-  margin-left: 40px;
-  font: normal normal normal 20px/34px Open Sans;
-  opacity: 1;
-}
-
 .message-username {
   @include width-height(334px, 55px);
   font: normal normal 600 25px/34px Open Sans;
@@ -50,6 +39,16 @@
   opacity: 1;
 }
 
+.message-input {
+  @include comment-styles;
+  width: 90%;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 3px;
+  font: normal normal normal 20px/34px Open Sans;
+  margin-top: 0;
+  opacity: 1;
+}
 
 .message-button {
   @include spacing(422px, 941px, 156px, 49px);

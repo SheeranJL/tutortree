@@ -3,9 +3,6 @@
   align-items: flex-end;
   flex-direction: column;
   position: relative;
-  &:not(:first-child) {
-    margin-top: 48px;
-  }
 }
 
 .post:first-child {

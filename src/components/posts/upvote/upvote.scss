@@ -18,9 +18,11 @@
   .vote-count {
     /* UI Properties */
     text-align: center;
-    font: normal normal bold 18px/24px Open Sans;
+    width: 37px;
+    font: normal normal bold 16px/24px Open Sans;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    margin: 5px;
   }
 }
