@@ -8,7 +8,7 @@ import CustomButton from '../../buttons/custom-button.js';
 
 
 
-const EachPost = ({data, handleEdit, postId, messageType}) => {
+const EachPost = ({data, handleEdit, postId, messageType, index, parentPost}) => {
 
   return (
     <div className={messageType === 'main' ? 'each-post' : 'each-reply'}>
@@ -23,7 +23,8 @@ const EachPost = ({data, handleEdit, postId, messageType}) => {
 
         <div className='message-button'>
           <CustomButton
-            textColour={'purple'}
+            type='message'
+            textColour={'#7510F7'}
             clickEvent={handleEdit}>
             Reply
           </CustomButton>

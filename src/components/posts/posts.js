@@ -26,7 +26,7 @@ const Posts = ({data, index}) => {
       <EachPost messageType={'main'} data={data} handleEdit={handleEdit} postId={index}/>
       {
         data.replies.length
-        ? data.replies.map((item, i) => <EachPost messageType={'reply'} data={item} handleEdit={handleEdit} postId={i} />)
+        ? data.replies.map((item, i) => <EachPost messageType={'reply'} parentPost={index} index={i} data={item} handleEdit={handleEdit} postId={i} />)
         : null
       }
     </div>

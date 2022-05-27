@@ -1,4 +1,4 @@
-button {
+.button {
   /* Layout Properties */
   top: 57px;
   left: 754px;
@@ -12,4 +12,9 @@ button {
   color: white;
   cursor: pointer;
   font: normal normal bold 30px/41px Open Sans;
+}
+
+
+.button-message {
+  font: 'normal normal bold 19px/41px Open Sans'
 }

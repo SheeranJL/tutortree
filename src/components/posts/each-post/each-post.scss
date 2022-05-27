@@ -5,6 +5,7 @@
   display: flex;
 
   @include spacing(280px, 157px, 969px, 218px);
+  height: auto;
   margin-right: 154px;
   opacity: 1;
 
@@ -13,6 +14,7 @@
 .each-reply {
   /* Layout Properties */
   @include spacing(546px, 268px, 858px, 218px);
+  height: auto;
   display: flex;
   margin-right: 154px;
   margin-top: 48px;
@@ -31,6 +33,8 @@
 
 .message-input {
   @include comment-styles;
+
+  width: 90%;
   text-align: left;
   margin-left: 40px;
   font: normal normal normal 20px/34px Open Sans;
@@ -48,10 +52,10 @@
 
 
 .message-button {
+  @include spacing(422px, 941px, 156px, 49px);
   margin-left: auto;
   margin-right: 29px;
-  @include spacing(422px, 941px, 156px, 49px);
-
+  margin-bottom: 27px;
 }
 
 
