@@ -4,6 +4,7 @@
   @include flex-column-center;
   @include width-height(1280px, 1438px);
   position: relative;
+  background-color: #F7F7F7;
 
   .modal-container {
     display: flex;

@@ -32,11 +32,12 @@ const Modal = ({modalType}) => {
     setModal(false);
   }
 
+  console.log(modalType);
 
   return (
     <div className='modal'>
 
-      <div className='top-modal-input'>
+      <div className={modalType === 'new' ? 'top-modal-input box-shadow-modal-top' : 'top-modal-input'}>
         <input
           className='input-text'
           name='input'
@@ -46,7 +47,7 @@ const Modal = ({modalType}) => {
         />
       </div>
 
-      <div className='bottom-modal-name'>
+      <div className={modalType === 'new' ? 'bottom-modal-name' : 'bottom-modal-name box-shadow-name'} >
       <input
         className='input-name'
         name='username'
@@ -60,7 +61,7 @@ const Modal = ({modalType}) => {
         <CustomButton
           fill={true}
           clickEvent={handleSubmit}>
-            {modalType === 'new' ? 'Post' : 'Reply'}
+          {modalType === 'new' ? 'Post' : 'Reply'}
         </CustomButton>
       </div>
 
