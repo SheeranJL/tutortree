@@ -11,7 +11,7 @@
 
 
   .vote-icon {
-    color: white;
+    color: rgba(210, 190, 252, 1);
     cursor: pointer;
   }
 
@@ -26,3 +26,13 @@
     margin: 5px;
   }
 }
+
+.arr-up, .arr-down {  /* Arrows @RCB */
+  border:       solid currentColor;
+  border-width: 0 .2em .2em 0;
+  display:      inline-block;
+  padding:      .20em;
+}
+
+.arr-up {transform:rotate(-135deg);}
+.arr-down  {transform:rotate(45deg);}
