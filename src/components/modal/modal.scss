@@ -22,8 +22,7 @@
       text-align: left;
       color: #141C3AA2;
       letter-spacing: 0px;
-      margin-top: 43px;
-      margin-left: 41px;
+      margin: 43px 0 0 41px;
       width: 90%;
       border: none;
       outline: none;
@@ -34,29 +33,28 @@
     display: flex;
     align-items: center;
     @include spacing(613px, 316px, 650px, 80px);
-    margin-top: 31px;
-    margin-bottom: 45px;
     @include background-style(#FFFFFF);
     border: $border-modal;
-    opacity: 1;
     border-radius: 50px;
+    margin: 31px 0 45px 0;
+    opacity: 1;
+
     .input-name {
       @include spacing(636px, 353px, 383px, 44px);
       font: $modal-font;
       font: normal normal 600 25px/34px Open Sans;
+      color: #141C3A;
       text-align: left;
       margin-left: 37px;
       letter-spacing: 0px;
       outline: none;
-      color: #141C3A;
       border: none;
       opacity: 1;
     }
   }
 
   .modal-button {
-    margin-right: 504px;
-    margin-left: 156px;
+    margin: 0 504px 0 156px;
     @include spacing(738px, 317px, 299px, 80px);
     @include width-height(299px, 80px);
   }
@@ -64,9 +62,9 @@
 
 
 .box-shadow-modal-top {
-    box-shadow: 0px 10px 20px #00000029;
+  box-shadow: 0px 10px 20px #00000029;
 }
 
 .box-shadow-name {
-    box-shadow: 0px 8px 20px #00000029;
+  box-shadow: 0px 8px 20px #00000029;
 }

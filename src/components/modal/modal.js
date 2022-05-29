@@ -12,18 +12,15 @@ const Modal = ({modalType}) => {
   //import context state//
   const {actions: {handleAddPost, handleAddReply, setModal, setEditIndex}, data: {modal, editIndex} } = useContext(appContext);
 
-
   //local component state//
   const [modalInput, setModalInput] = useState({ input: '', username: '', replies: [], votes: 0 });
   const {input, username} = modalInput;
-
 
   //Logic to handle element value changes and store these values in local app state (modalInput)//
   const handleChange = (e) => {
     const {name, value} = e.target
     setModalInput(prevState => ({...prevState, [name]: value }))
   }
-
 
   //Logic to handle submission//
   const handleSubmit = (e) => {
@@ -32,7 +29,6 @@ const Modal = ({modalType}) => {
     setModal(false);
   }
 
-  console.log(modalType);
 
   return (
     <div className='modal'>

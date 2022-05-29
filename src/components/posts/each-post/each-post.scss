@@ -19,6 +19,12 @@
   margin-right: 154px;
   margin-bottom: 53px;
   min-height: 218px;
+
+  &:first-child {
+    .message-input {
+      background-color: red;
+    }
+  }
 }
 
 .message-container {
@@ -44,10 +50,8 @@
   @include comment-styles;
   width: 90%;
   text-align: left;
-  margin-left: 40px;
-  margin-bottom: 3px;
+  margin: 0 0 3px 40px;
   font: normal normal normal 20px/34px Open Sans;
-  margin-top: 0;
   opacity: 1;
 }
 
@@ -55,7 +59,7 @@
   @include spacing(422px, 941px, 156px, 49px);
   margin-left: auto;
   margin-right: 29px;
-  margin-bottom: 27px;
+  margin-bottom: 22px;
 }
 
 

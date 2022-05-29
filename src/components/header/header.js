@@ -12,9 +12,9 @@ const Header = () => {
   //import context state//
   const {actions: {setModal}} = useContext(appContext);
 
-
   return (
     <div className='header-component'>
+
       <p>Maths For 'em</p>
 
       <div className='header-button'>
