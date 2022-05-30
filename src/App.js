@@ -18,25 +18,18 @@ const App = () => {
   return (
     <div className='app-container'>
 
+
+      { /*If modal (from context) is true, display the modal, otherwise, don't.*/
+        modal ? ( <div className='modal-container'> <Modal modalType={modal}/> </div> ) : null
+      }
+
       <div className='header-container'>
         <Header />
       </div>
 
-      {
-        modal
-        ? (
-          <div className='modal-container'>
-            <Modal modalType={modal}/>
-          </div>
-        )
-        : null
-      }
-
       <div className='post-container'>
-        {
-          !posts.length
-          ? null
-          : posts.map((item, index) => <Posts key={index} index={index} data={item}/>)
+        { /*If posts exist, display the posts, otherwise, don't and a blank screen will appear with only the header above*/
+          !posts.length ? null : posts.map((item, index) => <Posts key={index} index={index} data={item}/>)
         }
       </div>
 

@@ -38,25 +38,25 @@ const Modal = ({modalType}) => {
     <div className='modal'>
 
       <textarea
+        className={modalType === 'new' ? 'top-modal-input box-shadow-modal-top' : 'top-modal-input'}
+        style={{backgroundColor: modalType === 'new' ? '' : '#F7F7F7'}}
         name='input'
-        type="textarea"
         placeholder={modalType === 'new' ? 'Write your post....' : 'Write your reply....'}
         onChange={handleChange}
         value={input}
-        className={modalType === 'new' ? 'top-modal-input box-shadow-modal-top' : 'top-modal-input'}
       />
 
 
-      <div className={modalType === 'new' ? 'bottom-modal-name' : 'bottom-modal-name box-shadow-name'} >
-        <input
-          className='input-name'
-          name='username'
-          type="text"
-          placeholder='Enter your pseudonym'
-          value={username}
-          onChange={handleChange}
-        />
-      </div>
+      <input
+        className={modalType === 'new' ? 'bottom-modal-name input-name' : 'bottom-modal-name box-shadow-name input-name'}
+        style={{backgroundColor: modalType === 'new' ? '#F7F7F7' : ''}}
+        name='username'
+        type="text"
+        placeholder='Enter your pseudonym'
+        value={username}
+        onChange={handleChange}
+      />
+
 
       <div className={modalType === 'reply' ? 'modal-button-reply' : 'modal-button-post'}>
         <CustomButton
