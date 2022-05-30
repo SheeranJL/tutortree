@@ -5,9 +5,9 @@ export const appContext = createContext();
 export const Provider = (props) => {
 
   //Context application state//
-  const [posts, setPost] = useState([]);
-  const [modal, setModal] = useState(false);
-  const [editIndex, setEditIndex] = useState(null);
+  const [posts, setPost] = useState([]); //<-- holds all our posts, and respective replies.
+  const [modal, setModal] = useState(false); //<--
+  const [editIndex, setEditIndex] = useState(null); //<-- this is a marker for the index of the parent post whom we wish to append a reply to.
 
 
   //Local to handle adding a new post//
@@ -23,7 +23,7 @@ export const Provider = (props) => {
       newState[index].replies.push(reply)
       return newState;
     })
-    setEditIndex(null);
+    setEditIndex(null); //<-- set editIndex back to null.
   }
 
 

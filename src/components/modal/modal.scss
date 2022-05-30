@@ -16,19 +16,14 @@
     @include background-style(#FFFFFF);
     border: $border-modal;
     border-radius: 50px;
+    font: $modal-font;
+    color: #141C3AA2;
+    letter-spacing: 0px;
     opacity: 1;
-
-    .input-text {
-      @include spacing(389px, 357px, 383px, 44px);
-      font: $modal-font;
-      text-align: left;
-      color: #141C3AA2;
-      letter-spacing: 0px;
-      margin: 43px 0 0 41px;
-      width: 90%;
-      border: none;
-      outline: none;
-    }
+    outline: none;
+    padding-left: 41px;
+    padding-top: 43px;
+    resize: none;
   }
 
   .bottom-modal-name {
