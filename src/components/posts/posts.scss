@@ -2,7 +2,10 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  position: relative;
+
+  .replies {
+    line-height: 0px;
+  }
 }
 
 .post:first-child {

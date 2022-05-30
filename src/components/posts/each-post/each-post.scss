@@ -1,29 +1,29 @@
 @import '../../../scss/variables.scss';
 
 .each-post {
-  /* Layout Properties */
   display: flex;
   @include spacing(280px, 157px, 969px, 218px);
   height: auto;
-  margin-right: 154px;
-  opacity: 1;
-  margin-bottom: 48px;
   min-height: 218px;
+  margin: 0 154px 48px 0;
+  opacity: 1;
+
+  .message-button {
+    @include spacing(422px, 941px, 156px, 49px);
+    margin: 5px 29px 27px 718px;
+  }
 }
 
 .each-reply {
-  /* Layout Properties */
   @include spacing(546px, 268px, 858px, 218px);
-  height: auto;
   display: flex;
-  margin-right: 154px;
-  margin-bottom: 53px;
+  height: auto;
   min-height: 218px;
+  margin: 0 154px 53px 0;
 
-  &:first-child {
-    .message-input {
-      background-color: red;
-    }
+  .message-button {
+    @include spacing(422px, 941px, 156px, 49px);
+    margin: 0 29px 27px 607px;
   }
 }
 
@@ -33,6 +33,7 @@
   border: 1px solid #707070;
   box-shadow: 0px 8px 20px #0000004D;
   width: 100%;
+  word-wrap: break-word;
   opacity: 1;
 }
 
@@ -48,20 +49,12 @@
 
 .message-input {
   @include comment-styles;
+  font: normal normal normal 20px/34px Open Sans;
   width: 90%;
   text-align: left;
   margin: 0 0 3px 40px;
-  font: normal normal normal 20px/34px Open Sans;
   opacity: 1;
 }
-
-.message-button {
-  @include spacing(422px, 941px, 156px, 49px);
-  margin-left: auto;
-  margin-right: 29px;
-  margin-bottom: 22px;
-}
-
 
 .upvote-container {
   display: flex;
@@ -70,6 +63,28 @@
   min-height: 100%;
 }
 
+
 .each-reply:first-child {
-    margin-top: 58px;
+  .message-container {
+    position: relative;
+    .message-button {
+      position: absolute;
+      margin-top: 142px;
+      margin-bottom: 29px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .message-input {
+    max-width: 539px;
+  }
+};
+
+.each-reply:nth-child(2) {
+  .message-container {
+    .message-button {
+      margin-bottom: 22px;
+    }
+  }
 }

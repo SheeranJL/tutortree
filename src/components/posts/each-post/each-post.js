@@ -23,11 +23,13 @@ const EachPost = ({data, handleEdit, postId, messageType, index, parentPost}) =>
       <div className='message-container'>
         <p className='message-username'>{data.username}</p>
         <p className='message-input'>{data.input}</p>
+
         <div className='message-button'>
           <CustomButton type='message' textColour={'#7510F7'} clickEvent={handleEdit}>
             Reply
           </CustomButton>
         </div>
+
       </div>
 
     </div>

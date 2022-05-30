@@ -12,9 +12,11 @@ const Modal = ({modalType}) => {
   //import context state//
   const {actions: {handleAddPost, handleAddReply, setModal, setEditIndex}, data: {modal, editIndex} } = useContext(appContext);
 
-  //local component state//
-  const [modalInput, setModalInput] = useState({ input: '', username: '', replies: [], votes: 0 });
+
+  //local component state - holding input valuees//
+  const [modalInput, setModalInput] = useState({ input: '', username: '', replies: []});
   const {input, username} = modalInput;
+
 
   //Logic to handle element value changes and store these values in local app state (modalInput)//
   const handleChange = (e) => {
@@ -22,10 +24,12 @@ const Modal = ({modalType}) => {
     setModalInput(prevState => ({...prevState, [name]: value }))
   }
 
+
   //Logic to handle submission//
   const handleSubmit = (e) => {
-    if (!input || !username) return;
+    //if modal is for a new post, triage a request to create a new post, otherwise append a reply to parent post.
     modal === 'new' ? handleAddPost(modalInput) : handleAddReply(modalInput, editIndex)
+    setModalInput({input: '', username: '', replies: []});
     setModal(false);
   }
 
@@ -37,7 +41,7 @@ const Modal = ({modalType}) => {
         <input
           className='input-text'
           name='input'
-          type="text" placeholder={modalType === 'new' ? 'Write your post....' : 'Write your reply....'}
+          type="textarea" placeholder={modalType === 'new' ? 'Write your post....' : 'Write your reply....'}
           value={input}
           onChange={handleChange}
         />
@@ -53,7 +57,7 @@ const Modal = ({modalType}) => {
       />
       </div>
 
-      <div className='modal-button'>
+      <div className={modalType === 'reply' ? 'modal-button-reply' : 'modal-button-post'}>
         <CustomButton
           fill={true}
           clickEvent={handleSubmit}>
