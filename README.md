@@ -10,11 +10,10 @@ A few notes:
 - As the task wanted me to stay as close to the original design as possible - I did not include any additional functional or styling features beyond that which was strictly dictated within the prototype. This was on purpose in case you're wondering why I didn't add a modal close button for example or an edge case for no user-input.
 
 ## How to run
-Pull this repo and open up in preferred IDE
-Install dependancies
-Run project (npm start)
-Live link:
-
+- Pull this repo and open up in preferred IDE
+- Install dependancies (Only using SASS)
+- Run project (npm start)
+- Live link: https://sheeranjl.github.io/tutortree/
 
 ## Solution overview
 
