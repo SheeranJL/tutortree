@@ -9,6 +9,9 @@ A few notes:
 
 - As the task wanted me to stay as close to the original design as possible - I did not include any additional functional or styling features beyond that which was strictly dictated within the prototype. This was on purpose in case you're wondering why I didn't add a modal close button for example or an edge case for no user-input.
 
+- There was no style example for text entered into the modal reply/post textbox so I kept the color the same as the placeholder.
+
+
 ## How to run
 - Clone this repo and open up in preferred IDE
 - Install dependancies (Only using SASS)
