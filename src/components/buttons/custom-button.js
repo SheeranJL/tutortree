@@ -1,6 +1,8 @@
 import React from 'react';
 import './custom-button.scss';
 
+
+//Reusable button component//
 const CustomButton = ({children, clickEvent, type, fill, handleSubmit, textColour}) => {
   return (
     <button

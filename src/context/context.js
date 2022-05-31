@@ -1,7 +1,8 @@
 import React, {createContext, useState} from 'react';
-
 export const appContext = createContext();
 
+
+//Main application state - **this could have just been located in app.js but I like to keep state logic isolated from layout components**//
 export const Provider = (props) => {
 
   //Context application state//

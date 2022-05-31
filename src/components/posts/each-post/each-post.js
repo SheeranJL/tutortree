@@ -7,7 +7,6 @@ import CustomButton from '../../buttons/custom-button.js';
 //*****************//
 
 
-
 const EachPost = ({data, handleEdit, postId, messageType, index, parentPost}) => {
 
   //local state for votes//
