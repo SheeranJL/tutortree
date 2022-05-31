@@ -1,7 +1,7 @@
 # TutorTree Application Assessement
 
 ## The objectives
-This project follows the format of the XD files to the best of my ability, strictly adhering to all visible aspects of the prototype and not including anything else other than what was presented as it was not required.
+This project follows the format of the XD files to the best of my ability, strictly adhering only to the design prototype.
 
 A few notes:
 
