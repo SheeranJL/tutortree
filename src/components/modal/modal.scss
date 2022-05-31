@@ -17,14 +17,14 @@
     @include background-style(#FFFFFF);
     border: $border-modal;
     font: $modal-font;
-    border-radius: 50px;
-    color: #141C3AA2;
-    letter-spacing: 0px;
-    opacity: 1;
-    outline: none;
-    padding: 43px 0 0 41px;
-    resize: none;
     margin: 0 154px 0 155px;
+    padding: 43px 0 0 41px;
+    border-radius: 50px;
+    letter-spacing: 0px;
+    color: #141C3AA2;
+    outline: none;
+    resize: none;
+    opacity: 1;
   }
 
   .bottom-modal-name {

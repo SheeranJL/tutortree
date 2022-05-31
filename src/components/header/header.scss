@@ -10,7 +10,7 @@
   border-radius: 20px;
   opacity: 1;
 
-  p {
+  h1 {
     @include spacing(74px, 167px, 303px, 53px);
     font: normal normal bold 35px/47px Open Sans;
     color: $base-text;

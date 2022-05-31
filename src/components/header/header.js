@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div className='header-component'>
 
-      <p>Maths For 'em</p>
+      <h1>Maths For 'em</h1>
 
       <div className='header-button'>
         <CustomButton
