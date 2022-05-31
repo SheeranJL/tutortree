@@ -14,8 +14,10 @@ Pull this repo and open up in preferred IDE
 Install dependancies
 Run project (npm start)
 Live link:
-Below is a quick comparison of each screen. Note that the quality between screenshots differ, affecting visual congruenty at a glace.
+
 
 ## Solution overview
+
+Below is a quick comparison of each screen. Note that the quality between screenshots differ, affecting visual congruenty at a glace.
 
 ![solution](https://user-images.githubusercontent.com/88079543/171071147-211bc05b-8e24-4e42-8c78-31303a69ec74.png)
