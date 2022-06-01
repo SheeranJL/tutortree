@@ -65,6 +65,7 @@
 
 
 .each-reply:first-child {
+
   .message-container {
     position: relative;
     .message-button {
@@ -73,6 +74,12 @@
       margin-bottom: 29px;
       left: 0;
       top: 0;
+    }
+  }
+
+  .upvote-container {
+    .vote-count {
+      font: normal normal bold 17px/23px Open Sans;
     }
   }
 

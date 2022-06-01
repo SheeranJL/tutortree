@@ -11,3 +11,11 @@
 .post:first-child {
   margin-top: 192px;
 }
+
+.post:nth-child(2) {
+  .upvote-container {
+    .vote-count {
+      font: normal normal bold 16px/22px Open Sans;
+    }
+  }
+}
