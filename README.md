@@ -22,4 +22,4 @@ A few notes:
 
 Below is a quick comparison of each screen. Note that the quality between screenshots differ, affecting visual congruenty at a glace.
 
-![solution](https://user-images.githubusercontent.com/88079543/171071147-211bc05b-8e24-4e42-8c78-31303a69ec74.png)
+![solution](https://user-images.githubusercontent.com/88079543/171381000-ac91ca1b-1dda-4599-ae76-40be251e6737.png)
