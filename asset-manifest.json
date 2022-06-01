@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tutortree/static/css/main.5df3504d.css",
-    "main.js": "/tutortree/static/js/main.b411d6a5.js",
+    "main.css": "/tutortree/static/css/main.b6d23b10.css",
+    "main.js": "/tutortree/static/js/main.02495ef4.js",
     "index.html": "/tutortree/index.html",
-    "main.5df3504d.css.map": "/tutortree/static/css/main.5df3504d.css.map",
-    "main.b411d6a5.js.map": "/tutortree/static/js/main.b411d6a5.js.map"
+    "main.b6d23b10.css.map": "/tutortree/static/css/main.b6d23b10.css.map",
+    "main.02495ef4.js.map": "/tutortree/static/js/main.02495ef4.js.map"
   },
   "entrypoints": [
-    "static/css/main.5df3504d.css",
-    "static/js/main.b411d6a5.js"
+    "static/css/main.b6d23b10.css",
+    "static/js/main.02495ef4.js"
   ]
 }
