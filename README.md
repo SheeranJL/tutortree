@@ -14,7 +14,7 @@ A few notes:
 
 ## How to run
 - Clone this repo and open up in preferred IDE
-- Install dependancies (Only using SASS)
+- Install dependancies
 - Run project (npm start)
 - Live link: https://sheeranjl.github.io/tutortree/
 
